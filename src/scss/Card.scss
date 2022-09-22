@@ -1,0 +1,76 @@
+.card{
+    display: flex;
+    margin: calc(40px - 18px) 0;
+    
+    padding: 0 0 18px;
+
+    &:not(:last-child){
+        border-bottom: 2px solid #F5F5F5;
+    }
+
+    &__container{
+        margin: 50px 40px;
+    }
+
+    &__content{
+        margin: 0 15px;
+        
+        &--header{
+            display: flex;
+            font-size: 15px;
+            & > a {
+                color: #918E9B;
+                cursor: pointer;
+            }
+
+            &--location{
+                background: url(/icon/map-marker.svg) no-repeat left center;
+                padding: 0 15px;
+                font-weight: 400;
+            }
+        }
+
+        &--title{
+            font-size: 25px;
+            font-weight: 700;
+            padding: 7px 0 20px;
+        }
+
+        &--date{
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 20px;
+        }
+
+        &--description{
+            padding-top: 5px;
+            font-size: 15px;
+            line-height: 20px;
+        }
+    }
+    &__img{        
+        & > img{
+            width: 200px;
+            height: 170px;
+            object-fit: cover;
+            object-position: left;
+            border-radius: 10px;
+        }
+    }
+}
+
+@media(max-width:720px){
+    .card{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__img{
+            & > img{
+                width: 300px;
+                
+            }
+            padding-bottom: 10px;
+        }
+    }
+}
